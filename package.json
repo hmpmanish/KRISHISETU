@@ -1,9 +1,8 @@
 {
   "name": "krishisetu-prototype",
   "version": "1.0.0",
-  "description": "KrishiSetu SIH Prototype",
   "scripts": {
-    "build": "echo 'No build step required for static HTML prototype'",
-    "start": "echo 'Static site deployed successfully'"
+    "build": "node build.js",
+    "start": "npx serve dist"
   }
 }
