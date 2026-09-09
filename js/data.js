@@ -164,6 +164,658 @@ const VERIFIED_ENTITIES = [
             { type: "Registration Record", date: "2025-12-01", source: "MSME (Demo)", status: "Expired" }
         ]
     }
+    ,
+    {
+    "id": "DAO-GAUTAMBUDDHANAGAR",
+    "name": "DAO-GAUTAM BUDDHA NAGAR",
+    "type": "Dealer",
+    "location": "Gautam Buddha Nagar",
+    "categories": [
+        "Agri Inputs",
+        "Seeds"
+    ],
+    "verificationDate": "01-01-2024",
+    "validity": "02-01-2072",
+    "status": "VERIFIED IN PROTOTYPE",
+    "proofs": [
+        {
+            "type": "Dealer License",
+            "date": "01-01-2024",
+            "source": "UP Agriculture Dept",
+            "status": "Valid"
+        }
+    ]
+},
+    {
+    "id": "DAO SEED/144/GBN/10",
+    "name": "MAHESH VISHNU KHAD BEEJ BHANDAR KULESRA GBN",
+    "type": "Dealer",
+    "location": "Gautam Buddha Nagar",
+    "categories": [
+        "Agri Inputs",
+        "Seeds"
+    ],
+    "verificationDate": "01-01-2024",
+    "validity": "31-12-2027",
+    "status": "VERIFIED IN PROTOTYPE",
+    "proofs": [
+        {
+            "type": "Dealer License",
+            "date": "01-01-2024",
+            "source": "UP Agriculture Dept",
+            "status": "Valid"
+        }
+    ]
+},
+    {
+    "id": "DAO SEED/144/GBN/16",
+    "name": "NEW KRISHI NIVESH KENDRA",
+    "type": "Dealer",
+    "location": "Gautam Buddha Nagar",
+    "categories": [
+        "Agri Inputs",
+        "Seeds"
+    ],
+    "verificationDate": "01-01-2024",
+    "validity": "31-12-2027",
+    "status": "VERIFIED IN PROTOTYPE",
+    "proofs": [
+        {
+            "type": "Dealer License",
+            "date": "01-01-2024",
+            "source": "UP Agriculture Dept",
+            "status": "Valid"
+        }
+    ]
+},
+    {
+    "id": "ADA SEED/103/GBN/1",
+    "name": "ALLIANCE AGRI TECH",
+    "type": "Dealer",
+    "location": "Gautam Buddha Nagar",
+    "categories": [
+        "Agri Inputs",
+        "Seeds"
+    ],
+    "verificationDate": "01-01-2024",
+    "validity": "31-12-2027",
+    "status": "VERIFIED IN PROTOTYPE",
+    "proofs": [
+        {
+            "type": "Dealer License",
+            "date": "01-01-2024",
+            "source": "UP Agriculture Dept",
+            "status": "Valid"
+        }
+    ]
+},
+    {
+    "id": "DAO SEED/144/GBN/11",
+    "name": "JANTA AGRIJUNCTION NOORPUR DADRI GBN",
+    "type": "Dealer",
+    "location": "Gautam Buddha Nagar",
+    "categories": [
+        "Agri Inputs",
+        "Seeds"
+    ],
+    "verificationDate": "01-01-2024",
+    "validity": "31-12-2027",
+    "status": "VERIFIED IN PROTOTYPE",
+    "proofs": [
+        {
+            "type": "Dealer License",
+            "date": "01-01-2024",
+            "source": "UP Agriculture Dept",
+            "status": "Valid"
+        }
+    ]
+},
+    {
+    "id": "DAO SEED/144/GBN/9",
+    "name": "GURUKRIPA AGRI TRADERS DERY SCKENAR DADRI GBN",
+    "type": "Dealer",
+    "location": "Gautam Buddha Nagar",
+    "categories": [
+        "Agri Inputs",
+        "Seeds"
+    ],
+    "verificationDate": "01-01-2024",
+    "validity": "31-12-2027",
+    "status": "VERIFIED IN PROTOTYPE",
+    "proofs": [
+        {
+            "type": "Dealer License",
+            "date": "01-01-2024",
+            "source": "UP Agriculture Dept",
+            "status": "Valid"
+        }
+    ]
+},
+    {
+    "id": "DAO SEED/144/GBN/15",
+    "name": "S S Traders Chhapraula Dadri GBN",
+    "type": "Dealer",
+    "location": "Gautam Buddha Nagar",
+    "categories": [
+        "Agri Inputs",
+        "Seeds"
+    ],
+    "verificationDate": "01-01-2024",
+    "validity": "31-12-2027",
+    "status": "VERIFIED IN PROTOTYPE",
+    "proofs": [
+        {
+            "type": "Dealer License",
+            "date": "01-01-2024",
+            "source": "UP Agriculture Dept",
+            "status": "Valid"
+        }
+    ]
+},
+    {
+    "id": "DAO SEED/144/GBN/17",
+    "name": "PRANAV KHAD BEEJ BHANDAR CHHAYANSA DADRI GBN",
+    "type": "Dealer",
+    "location": "Gautam Buddha Nagar",
+    "categories": [
+        "Agri Inputs",
+        "Seeds"
+    ],
+    "verificationDate": "01-01-2024",
+    "validity": "31-12-2027",
+    "status": "VERIFIED IN PROTOTYPE",
+    "proofs": [
+        {
+            "type": "Dealer License",
+            "date": "01-01-2024",
+            "source": "UP Agriculture Dept",
+            "status": "Valid"
+        }
+    ]
+},
+    {
+    "id": "DAO SEED/144/GBN/12",
+    "name": "SHREE VISHNU MADHAV BEEJ BHANDAR KULESRA GBN",
+    "type": "Dealer",
+    "location": "Gautam Buddha Nagar",
+    "categories": [
+        "Agri Inputs",
+        "Seeds"
+    ],
+    "verificationDate": "01-01-2024",
+    "validity": "31-12-2027",
+    "status": "VERIFIED IN PROTOTYPE",
+    "proofs": [
+        {
+            "type": "Dealer License",
+            "date": "01-01-2024",
+            "source": "UP Agriculture Dept",
+            "status": "Valid"
+        }
+    ]
+},
+    {
+    "id": "DAO SEED/145/GZB/13",
+    "name": "B PACS KARIMNAGAR KATIYAR",
+    "type": "Dealer",
+    "location": "Gautam Buddha Nagar",
+    "categories": [
+        "Agri Inputs",
+        "Seeds"
+    ],
+    "verificationDate": "01-01-2024",
+    "validity": "31-12-2027",
+    "status": "VERIFIED IN PROTOTYPE",
+    "proofs": [
+        {
+            "type": "Dealer License",
+            "date": "01-01-2024",
+            "source": "UP Agriculture Dept",
+            "status": "Valid"
+        }
+    ]
+},
+    {
+    "id": "DAO SEED/144/GBN/14",
+    "name": "JAGVEER KHAAD BEEJ BHANDAR ASGARPUR GREATER NODIA",
+    "type": "Dealer",
+    "location": "Gautam Buddha Nagar",
+    "categories": [
+        "Agri Inputs",
+        "Seeds"
+    ],
+    "verificationDate": "01-01-2024",
+    "validity": "31-12-2027",
+    "status": "VERIFIED IN PROTOTYPE",
+    "proofs": [
+        {
+            "type": "Dealer License",
+            "date": "01-01-2024",
+            "source": "UP Agriculture Dept",
+            "status": "Valid"
+        }
+    ]
+},
+    {
+    "id": "DAO SEED/144/GBN/13",
+    "name": "KISAN AGRI JUCTION JARCHA DADRI GBN",
+    "type": "Dealer",
+    "location": "Gautam Buddha Nagar",
+    "categories": [
+        "Agri Inputs",
+        "Seeds"
+    ],
+    "verificationDate": "01-01-2024",
+    "validity": "31-12-2027",
+    "status": "VERIFIED IN PROTOTYPE",
+    "proofs": [
+        {
+            "type": "Dealer License",
+            "date": "01-01-2024",
+            "source": "UP Agriculture Dept",
+            "status": "Valid"
+        }
+    ]
+},
+    {
+    "id": "DAO SEED/144/GBN/8",
+    "name": "SANTOSH SHARMA",
+    "type": "Dealer",
+    "location": "Gautam Buddha Nagar",
+    "categories": [
+        "Agri Inputs",
+        "Seeds"
+    ],
+    "verificationDate": "01-01-2024",
+    "validity": "31-12-2027",
+    "status": "VERIFIED IN PROTOTYPE",
+    "proofs": [
+        {
+            "type": "Dealer License",
+            "date": "01-01-2024",
+            "source": "UP Agriculture Dept",
+            "status": "Valid"
+        }
+    ]
+},
+    {
+    "id": "DAO SEED/144/GBN/7",
+    "name": "SADHAN SEHKARI SAMITY LIMITED BISHARA AT KHATANA DHEERKHERA GBN",
+    "type": "Dealer",
+    "location": "Gautam Buddha Nagar",
+    "categories": [
+        "Agri Inputs",
+        "Seeds"
+    ],
+    "verificationDate": "01-01-2024",
+    "validity": "31-12-2027",
+    "status": "VERIFIED IN PROTOTYPE",
+    "proofs": [
+        {
+            "type": "Dealer License",
+            "date": "01-01-2024",
+            "source": "UP Agriculture Dept",
+            "status": "Valid"
+        }
+    ]
+},
+    {
+    "id": "DAO SEED/144/GBN/6",
+    "name": "DRISHTI KHAD BEEJ BHANDAR KULESRA GBN",
+    "type": "Dealer",
+    "location": "Gautam Buddha Nagar",
+    "categories": [
+        "Agri Inputs",
+        "Seeds"
+    ],
+    "verificationDate": "01-01-2024",
+    "validity": "31-12-2027",
+    "status": "VERIFIED IN PROTOTYPE",
+    "proofs": [
+        {
+            "type": "Dealer License",
+            "date": "01-01-2024",
+            "source": "UP Agriculture Dept",
+            "status": "Valid"
+        }
+    ]
+},
+    {
+    "id": "DAO SEED/144/GBN/5",
+    "name": "BHARAT TRADERS KHURJA ROAD JEWAR GBN",
+    "type": "Dealer",
+    "location": "Gautam Buddha Nagar",
+    "categories": [
+        "Agri Inputs",
+        "Seeds"
+    ],
+    "verificationDate": "01-01-2024",
+    "validity": "31-12-2027",
+    "status": "VERIFIED IN PROTOTYPE",
+    "proofs": [
+        {
+            "type": "Dealer License",
+            "date": "01-01-2024",
+            "source": "UP Agriculture Dept",
+            "status": "Valid"
+        }
+    ]
+},
+    {
+    "id": "DAO SEED/144/GBN/4",
+    "name": "GUPTA BEEJ PAINTS HOUSE RABUPURA JEWAR GBN",
+    "type": "Dealer",
+    "location": "Gautam Buddha Nagar",
+    "categories": [
+        "Agri Inputs",
+        "Seeds"
+    ],
+    "verificationDate": "01-01-2024",
+    "validity": "31-12-2027",
+    "status": "VERIFIED IN PROTOTYPE",
+    "proofs": [
+        {
+            "type": "Dealer License",
+            "date": "01-01-2024",
+            "source": "UP Agriculture Dept",
+            "status": "Valid"
+        }
+    ]
+},
+    {
+    "id": "DAO SEED/144/GBN/3",
+    "name": "BHATI TRADERS FALAIDA BANGAR JEWAR",
+    "type": "Dealer",
+    "location": "Gautam Buddha Nagar",
+    "categories": [
+        "Agri Inputs",
+        "Seeds"
+    ],
+    "verificationDate": "01-01-2024",
+    "validity": "31-12-2027",
+    "status": "VERIFIED IN PROTOTYPE",
+    "proofs": [
+        {
+            "type": "Dealer License",
+            "date": "01-01-2024",
+            "source": "UP Agriculture Dept",
+            "status": "Valid"
+        }
+    ]
+},
+    {
+    "id": "DAO SEED/144/GBN/2",
+    "name": "NEW KRISHAK SEWA KENDRA",
+    "type": "Dealer",
+    "location": "Gautam Buddha Nagar",
+    "categories": [
+        "Agri Inputs",
+        "Seeds"
+    ],
+    "verificationDate": "01-01-2024",
+    "validity": "31-12-2027",
+    "status": "VERIFIED IN PROTOTYPE",
+    "proofs": [
+        {
+            "type": "Dealer License",
+            "date": "01-01-2024",
+            "source": "UP Agriculture Dept",
+            "status": "Valid"
+        }
+    ]
+},
+    {
+    "id": "DAO SEED/144/GBN/1",
+    "name": "SAINI SEEDS DUJANA ROAD ACHHEJA GBN",
+    "type": "Dealer",
+    "location": "Gautam Buddha Nagar",
+    "categories": [
+        "Agri Inputs",
+        "Seeds"
+    ],
+    "verificationDate": "01-01-2024",
+    "validity": "31-12-2027",
+    "status": "VERIFIED IN PROTOTYPE",
+    "proofs": [
+        {
+            "type": "Dealer License",
+            "date": "01-01-2024",
+            "source": "UP Agriculture Dept",
+            "status": "Valid"
+        }
+    ]
+},
+    {
+    "id": "DAO/GBN/90",
+    "name": "SagarMal Chringilal Dankaur",
+    "type": "Dealer",
+    "location": "Gautam Buddha Nagar",
+    "categories": [
+        "Agri Inputs",
+        "Seeds"
+    ],
+    "verificationDate": "01-01-2024",
+    "validity": "31-12-2027",
+    "status": "VERIFIED IN PROTOTYPE",
+    "proofs": [
+        {
+            "type": "Dealer License",
+            "date": "01-01-2024",
+            "source": "UP Agriculture Dept",
+            "status": "Valid"
+        }
+    ]
+},
+    {
+    "id": "DAO/GBN/89",
+    "name": "Bishamber Dayal Girdhrilal Dankaur",
+    "type": "Dealer",
+    "location": "Gautam Buddha Nagar",
+    "categories": [
+        "Agri Inputs",
+        "Seeds"
+    ],
+    "verificationDate": "01-01-2024",
+    "validity": "31-12-2027",
+    "status": "VERIFIED IN PROTOTYPE",
+    "proofs": [
+        {
+            "type": "Dealer License",
+            "date": "01-01-2024",
+            "source": "UP Agriculture Dept",
+            "status": "Valid"
+        }
+    ]
+},
+    {
+    "id": "DAO/GBN/82",
+    "name": "Sharma Kisan Seva Kwndra Bhaipur",
+    "type": "Dealer",
+    "location": "Gautam Buddha Nagar",
+    "categories": [
+        "Agri Inputs",
+        "Seeds"
+    ],
+    "verificationDate": "01-01-2024",
+    "validity": "31-12-2027",
+    "status": "VERIFIED IN PROTOTYPE",
+    "proofs": [
+        {
+            "type": "Dealer License",
+            "date": "01-01-2024",
+            "source": "UP Agriculture Dept",
+            "status": "Valid"
+        }
+    ]
+},
+    {
+    "id": "DAO/GBN/70",
+    "name": "San Building Matrial Hardware & Khad Bhandar",
+    "type": "Dealer",
+    "location": "Gautam Buddha Nagar",
+    "categories": [
+        "Agri Inputs",
+        "Seeds"
+    ],
+    "verificationDate": "01-01-2024",
+    "validity": "31-12-2027",
+    "status": "VERIFIED IN PROTOTYPE",
+    "proofs": [
+        {
+            "type": "Dealer License",
+            "date": "01-01-2024",
+            "source": "UP Agriculture Dept",
+            "status": "Valid"
+        }
+    ]
+},
+    {
+    "id": "DAO/GBN/56",
+    "name": "Mahesh Pesticide Seed & Fertizer Kulsera GBN",
+    "type": "Dealer",
+    "location": "Gautam Buddha Nagar",
+    "categories": [
+        "Agri Inputs",
+        "Seeds"
+    ],
+    "verificationDate": "01-01-2024",
+    "validity": "31-12-2027",
+    "status": "VERIFIED IN PROTOTYPE",
+    "proofs": [
+        {
+            "type": "Dealer License",
+            "date": "01-01-2024",
+            "source": "UP Agriculture Dept",
+            "status": "Valid"
+        }
+    ]
+},
+    {
+    "id": "DAO/GBN/55",
+    "name": "Kisan Khad Bikri Kendra MandiShyamNagar",
+    "type": "Dealer",
+    "location": "Gautam Buddha Nagar",
+    "categories": [
+        "Agri Inputs",
+        "Seeds"
+    ],
+    "verificationDate": "01-01-2024",
+    "validity": "31-12-2027",
+    "status": "VERIFIED IN PROTOTYPE",
+    "proofs": [
+        {
+            "type": "Dealer License",
+            "date": "01-01-2024",
+            "source": "UP Agriculture Dept",
+            "status": "Valid"
+        }
+    ]
+},
+    {
+    "id": "DAO/GBN/50",
+    "name": "Gyoal Fertilizer And Chemical Jewar",
+    "type": "Dealer",
+    "location": "Gautam Buddha Nagar",
+    "categories": [
+        "Agri Inputs",
+        "Seeds"
+    ],
+    "verificationDate": "01-01-2024",
+    "validity": "31-12-2027",
+    "status": "VERIFIED IN PROTOTYPE",
+    "proofs": [
+        {
+            "type": "Dealer License",
+            "date": "01-01-2024",
+            "source": "UP Agriculture Dept",
+            "status": "Valid"
+        }
+    ]
+},
+    {
+    "id": "DAO/GBN/2",
+    "name": "Pant Nagar Beej Bhandar Mandi Shyam Nagar",
+    "type": "Dealer",
+    "location": "Gautam Buddha Nagar",
+    "categories": [
+        "Agri Inputs",
+        "Seeds"
+    ],
+    "verificationDate": "01-01-2024",
+    "validity": "31-12-2027",
+    "status": "VERIFIED IN PROTOTYPE",
+    "proofs": [
+        {
+            "type": "Dealer License",
+            "date": "01-01-2024",
+            "source": "UP Agriculture Dept",
+            "status": "Valid"
+        }
+    ]
+},
+    {
+    "id": "DAO/GBN/178",
+    "name": "Raghuvansh Agrijuction Piyawali Tajpur Dadri",
+    "type": "Dealer",
+    "location": "Gautam Buddha Nagar",
+    "categories": [
+        "Agri Inputs",
+        "Seeds"
+    ],
+    "verificationDate": "01-01-2024",
+    "validity": "31-12-2027",
+    "status": "VERIFIED IN PROTOTYPE",
+    "proofs": [
+        {
+            "type": "Dealer License",
+            "date": "01-01-2024",
+            "source": "UP Agriculture Dept",
+            "status": "Valid"
+        }
+    ]
+},
+    {
+    "id": "DAO/GBN/175",
+    "name": "Kishan Agro Agency Chacura G B Nagar",
+    "type": "Dealer",
+    "location": "Gautam Buddha Nagar",
+    "categories": [
+        "Agri Inputs",
+        "Seeds"
+    ],
+    "verificationDate": "01-01-2024",
+    "validity": "31-12-2027",
+    "status": "VERIFIED IN PROTOTYPE",
+    "proofs": [
+        {
+            "type": "Dealer License",
+            "date": "01-01-2024",
+            "source": "UP Agriculture Dept",
+            "status": "Valid"
+        }
+    ]
+},
+    {
+    "id": "DAO/GBN/171",
+    "name": "Kisan Agrijuction Dhoommanikpur Dadri",
+    "type": "Dealer",
+    "location": "Gautam Buddha Nagar",
+    "categories": [
+        "Agri Inputs",
+        "Seeds"
+    ],
+    "verificationDate": "01-01-2024",
+    "validity": "31-12-2027",
+    "status": "VERIFIED IN PROTOTYPE",
+    "proofs": [
+        {
+            "type": "Dealer License",
+            "date": "01-01-2024",
+            "source": "UP Agriculture Dept",
+            "status": "Valid"
+        }
+    ]
+}
 ];
 
 const INITIAL_ROLES = {
