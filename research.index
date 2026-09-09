@@ -28,46 +28,61 @@ KrishiSetu is an AI-Based Post-Harvest Decision & Rescue Engine. It acts as a un
 
 ---
 
-## 3. TECHNICAL ARCHITECTURE & WORKSPACE MAPPING
-
-### A. The AI Engine & Data Fusion
-*Presentation Tech Stack:* Python, FastAPI, PostgreSQL, TensorFlow.js, React, AWS.
-
-**Codebase Implementation:**
-*   `backend/` - Contains the Python FastAPI backend skeleton, `requirements.txt`, and API scripts intended to interface with:
-    *   **Agmarknet API:** For real-time agricultural market pricing feeds.
-    *   **IMD Weather API:** For local weather forecasts & logistics planning.
-    *   **YOLOv8 Model:** For visual grade analysis and shelf-life forecasting.
-
-### B. The User Interface & Master Prototype (Vercel)
-*To ensure a flawless SIH demonstration, the frontend prototype has been engineered as an ultra-fast, static Single-Page Application (SPA) deployed on Vercel.*
-
-**Codebase Implementation (`/` and `frontend/`):**
-*   `index.html`: The master entry point featuring a dynamic, glassmorphism-styled UI.
-*   `css/style.css`: Premium UI styling utilizing mesh gradients, frosted glass effects, and micro-animations.
-*   `public/js/app.js`: Core application logic, routing (Farmer, Processor, Admin dashboards), and magic-moment UI triggers.
-*   `public/js/decisionEngine.js`: The frontend rule engine that simulates the AI's contextual math, outputting the exact *Sell, Store, Process, or Rescue* confidence scores.
-*   `public/js/data.js`: The local data layer containing simulated batches, processing opportunities, and the Trust & Verify ecosystem.
-*   `dealers.html` & `generateHtml.js`: A standalone verified dealer registry containing 54 real-world dealers from Gonda and Gautam Buddha Nagar (GBN).
-*   `package.json` & `vite.config` (implicit): Configured to seamlessly bundle the prototype via Vite for optimal Vercel deployment.
+## 3. MARKET ANALYSIS & BUSINESS POTENTIAL
+**The AgriTech Market Opportunity:**
+*   **Total Addressable Market (TAM):** India's agriculture sector is valued at over $350 Billion, with post-harvest logistics and supply chain inefficiencies costing $14+ Billion annually.
+*   **Serviceable Available Market (SAM):** Tech-enabled farmers and FPOs (Farmer Producer Organizations) across major agricultural states (UP, Punjab, Maharashtra).
+*   **Business Potential & Monetization:**
+    *   **B2B SaaS Model:** Subscription fees for Cold Storage units and Processors for verified leads.
+    *   **Transaction Commission:** Nominal commission on successful bulk "Rescue" and "Process" matches.
+    *   **Data Intelligence:** Aggregated, anonymized supply-chain insights for government policymakers and large retail chains.
 
 ---
 
-## 4. FEASIBILITY, VIABILITY, & SCALABILITY
+## 4. EXISTING SYSTEM COMPARISON (COMPETITOR MATRIX)
+*Legacy players offer isolated utilities. LogicForge integrates parameters to suggest the absolute next best step.*
+*   **Price Forecasting:** Legacy Systems (✅) | KrishiSetu (✅)
+*   **Quality Grading:** Legacy Systems (❌) | KrishiSetu (✅ via YOLOv8)
+*   **Storage Decisions:** Legacy Systems (❌) | KrishiSetu (✅ via Shelf-Life AI)
+*   **Processing Routing:** Legacy Systems (❌) | KrishiSetu (✅ via Unified Engine)
+**The Gap:** KrishiSetu closes the "Unified Decision Engine Gap" by acting as a continuous pipeline rather than a fragmented tool.
+
+---
+
+## 5. AVAILABLE RESOURCES & ECOSYSTEM PARTNERS
+To ensure seamless execution, KrishiSetu leverages open government APIs and existing infrastructure:
+*   **Open APIs:** Agmarknet (Market Prices), IMD (Weather/Logistics).
+*   **Tech Stack:** Python, FastAPI, PostgreSQL, TensorFlow.js (for on-device AI), AWS Cloud Infrastructure.
+*   **Ecosystem Partnerships:** FPOs (Farmer Producer Organizations), Local Cold Storages, Agro-Processing Units, and Logistics Providers.
+
+---
+
+## 6. TECHNICAL ARCHITECTURE & WORKSPACE MAPPING
+
+### A. The AI Engine & Data Fusion
+**Codebase Implementation:**
+*   `backend/` - Contains the Python FastAPI backend skeleton, `requirements.txt`, and API scripts intended to interface with APIs and the YOLOv8 Model.
+
+### B. The User Interface & Master Prototype (Vercel)
+**Codebase Implementation (`/` and `frontend/`):**
+*   `index.html`: The master entry point featuring a dynamic, glassmorphism-styled UI.
+*   `public/js/app.js`: Core application logic, routing (Farmer, Processor, Admin dashboards).
+*   `public/js/decisionEngine.js`: The frontend rule engine simulating the AI's contextual math.
+*   `public/js/data.js`: Local data layer containing a Trust & Verify ecosystem.
+*   `dealers.html`: A standalone verified dealer registry containing 54 real-world dealers from Gonda and GBN.
+
+---
+
+## 7. FEASIBILITY, VIABILITY, & SCALABILITY
 **Risk Mitigation Matrix Mapping:**
 *   **Data Quality:** Mitigated by validation pipelines before Computer Vision analysis.
-*   **Market Volatility:** Mitigated by outputting *Confidence Scores* rather than absolute predictions (visible in the Magic Moment UI).
-*   **Connectivity Constraints:** Addressed in the prototype via a lightweight, low-bandwidth static interface that doesn't rely on heavy client-side frameworks.
+*   **Market Volatility:** Mitigated by outputting *Confidence Scores* rather than absolute predictions.
+*   **Connectivity Constraints:** Addressed via a lightweight, low-bandwidth static interface (Vercel Prototype).
 
 **Scalability (Future Scope):**
 *   **Expandable Crop-by-Crop:** Iteratively scaling from Tomatoes/Potatoes to diverse cash crops and grains.
 *   **Modular CV Architecture:** Cloud-deployable models that improve independently.
-*   **IoT & Multilingual:** Planned integration for cold storage sensor monitoring and regional voice commands.
+*   **IoT & Multilingual:** Cold storage sensor monitoring and regional voice commands.
 
 ---
-
-## 5. COMPETITIVE ADVANTAGE
-Unlike legacy players that offer isolated utilities (e.g., *only* price forecasting or *only* quality grading), KrishiSetu integrates all parameters to suggest the **absolute next best step**, closing the "Unified Decision Engine Gap" in the Indian AgriTech sector.
-
----
-*Index generated from `SIH2025-IDEA-Presentation- KRISHISETU.pdf` and D:\888888888888888888888\KRISHISETU source files.*
+*Index generated from `SIH2025-IDEA-Presentation- KRISHISETU.pdf` and local source files.*

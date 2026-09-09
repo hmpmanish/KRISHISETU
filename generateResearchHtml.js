@@ -7,7 +7,7 @@ const htmlContent = `<!DOCTYPE html>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>KrishiSetu - Research & Architecture Index</title>
+    <title>KrishiSetu - Full Research & Architecture Index</title>
     <style>${cssContent}</style>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
@@ -50,6 +50,20 @@ const htmlContent = `<!DOCTYPE html>
         li {
             margin-bottom: 10px;
         }
+        .competitor-matrix {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+        }
+        .competitor-matrix th, .competitor-matrix td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid var(--border);
+        }
+        .competitor-matrix th {
+            background: rgba(0,0,0,0.02);
+            color: var(--text);
+        }
     </style>
 </head>
 <body data-theme="light">
@@ -74,7 +88,7 @@ const htmlContent = `<!DOCTYPE html>
 
         <div class="research-card">
             <h2><i class="fa-solid fa-bullseye"></i> 1. Project Overview & Core Ideology</h2>
-            <p>KrishiSetu is an AI-Based Post-Harvest Decision & Rescue Engine. It acts as a unified platform to prevent agricultural produce from spoiling by providing data-driven recommendations on whether a farmer should:</p>
+            <p>KrishiSetu is an AI-Based Post-Harvest Decision & Rescue Engine. It acts as a unified platform to prevent agricultural produce from spoiling by providing data-driven recommendations.</p>
             <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px; margin-top: 20px;">
                 <div class="card" style="border-top: 4px solid var(--color-sell)"><strong>SELL NOW:</strong> Optimal market timing</div>
                 <div class="card" style="border-top: 4px solid var(--color-store)"><strong>STORE:</strong> Shelf-life & quality guidance</div>
@@ -101,10 +115,75 @@ const htmlContent = `<!DOCTYPE html>
         </div>
 
         <div class="research-card">
-            <h2><i class="fa-solid fa-sitemap"></i> 3. Technical Architecture</h2>
+            <h2><i class="fa-solid fa-chart-pie"></i> 3. Market Analysis & Business Potential</h2>
+            <h3>The AgriTech Market Opportunity</h3>
+            <ul>
+                <li><strong>Total Addressable Market (TAM):</strong> India's agriculture sector is valued at over $350 Billion, with post-harvest logistics and supply chain inefficiencies costing $14+ Billion annually.</li>
+                <li><strong>Serviceable Available Market (SAM):</strong> Tech-enabled farmers and FPOs across major agricultural states (UP, Punjab, Maharashtra).</li>
+            </ul>
+            <h3>Business Potential & Monetization</h3>
+            <ul>
+                <li><strong>B2B SaaS Model:</strong> Subscription fees for Cold Storage units and Processors for verified leads.</li>
+                <li><strong>Transaction Commission:</strong> Nominal commission on successful bulk "Rescue" and "Process" matches.</li>
+                <li><strong>Data Intelligence:</strong> Aggregated, anonymized supply-chain insights for government policymakers and large retail chains.</li>
+            </ul>
+        </div>
+
+        <div class="research-card">
+            <h2><i class="fa-solid fa-chess-knight"></i> 4. Existing System Comparison</h2>
+            <p>Legacy players offer isolated utilities. LogicForge integrates parameters to suggest the <strong>absolute next best step</strong>.</p>
+            
+            <table class="competitor-matrix">
+                <thead>
+                    <tr>
+                        <th>Capability</th>
+                        <th>Legacy Systems</th>
+                        <th>LogicForge (KrishiSetu)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Price Forecasting</strong></td>
+                        <td><span class="text-success"><i class="fa-solid fa-check-circle"></i></span></td>
+                        <td><span class="text-success"><i class="fa-solid fa-check-circle"></i></span></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Quality Grading</strong></td>
+                        <td><span class="text-danger"><i class="fa-solid fa-xmark-circle"></i></span></td>
+                        <td><span class="text-success"><i class="fa-solid fa-check-circle"></i> via YOLOv8</span></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Storage Decisions</strong></td>
+                        <td><span class="text-danger"><i class="fa-solid fa-xmark-circle"></i></span></td>
+                        <td><span class="text-success"><i class="fa-solid fa-check-circle"></i> via Shelf-Life AI</span></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Processing Routing</strong></td>
+                        <td><span class="text-danger"><i class="fa-solid fa-xmark-circle"></i></span></td>
+                        <td><span class="text-success"><i class="fa-solid fa-check-circle"></i> via Unified Engine</span></td>
+                    </tr>
+                </tbody>
+            </table>
+            
+            <div class="highlight-box mt-2">
+                <strong>The Gap:</strong> KrishiSetu closes the "Unified Decision Engine Gap" by acting as a continuous pipeline rather than a fragmented tool.
+            </div>
+        </div>
+
+        <div class="research-card">
+            <h2><i class="fa-solid fa-link"></i> 5. Available Resources & Ecosystem</h2>
+            <p>To ensure seamless execution, KrishiSetu leverages open government APIs and existing infrastructure:</p>
+            <ul>
+                <li><strong>Open APIs:</strong> Agmarknet (Market Prices), IMD (Weather/Logistics).</li>
+                <li><strong>Tech Stack:</strong> Python, FastAPI, PostgreSQL, TensorFlow.js (for on-device AI), AWS Cloud Infrastructure.</li>
+                <li><strong>Ecosystem Partnerships:</strong> FPOs (Farmer Producer Organizations), Local Cold Storages, Agro-Processing Units, and Logistics Providers.</li>
+            </ul>
+        </div>
+
+        <div class="research-card">
+            <h2><i class="fa-solid fa-sitemap"></i> 6. Technical Architecture</h2>
             
             <h3>A. The AI Engine & Data Fusion</h3>
-            <p><strong>Proposed Stack:</strong> Python, FastAPI, PostgreSQL, TensorFlow.js, React, AWS.</p>
             <ul>
                 <li><strong>Agmarknet API:</strong> Real-time agricultural market pricing feeds.</li>
                 <li><strong>IMD Weather API:</strong> Local weather forecasts & logistics planning.</li>
@@ -114,14 +193,14 @@ const htmlContent = `<!DOCTYPE html>
             <h3>B. Master Prototype (Live Deployment)</h3>
             <p>Engineered as an ultra-fast, static SPA deployed on Vercel to ensure flawless SIH demonstration.</p>
             <ul>
-                <li><strong>decisionEngine.js:</strong> Frontend rule engine simulating AI contextual math (outputting confidence scores).</li>
-                <li><strong>data.js:</strong> Local data layer with simulated batches and a Trust & Verify ecosystem containing 54 real-world dealers.</li>
-                <li><strong>UI/UX:</strong> Glassmorphism styling, frosted glass effects, and dynamic micro-animations without heavy client frameworks.</li>
+                <li><strong>decisionEngine.js:</strong> Frontend rule engine simulating AI contextual math.</li>
+                <li><strong>data.js:</strong> Local data layer with simulated batches and a Trust & Verify ecosystem.</li>
+                <li><strong>UI/UX:</strong> Glassmorphism styling, frosted glass effects, and dynamic micro-animations.</li>
             </ul>
         </div>
 
         <div class="research-card">
-            <h2><i class="fa-solid fa-chart-line"></i> 4. Feasibility, Viability & Scalability</h2>
+            <h2><i class="fa-solid fa-chart-line"></i> 7. Feasibility, Viability & Scalability</h2>
             <h3>Risk Mitigation</h3>
             <ul>
                 <li><strong>Data Quality:</strong> Validation pipelines before Computer Vision analysis.</li>
@@ -136,11 +215,6 @@ const htmlContent = `<!DOCTYPE html>
             </ul>
         </div>
 
-        <div class="research-card">
-            <h2><i class="fa-solid fa-trophy"></i> 5. Competitive Advantage</h2>
-            <p>Unlike legacy players that offer isolated utilities (e.g., only price forecasting or only quality grading), KrishiSetu integrates all parameters to suggest the <strong>absolute next best step</strong>, closing the "Unified Decision Engine Gap" in the Indian AgriTech sector.</p>
-        </div>
-
     </div>
 </body>
 </html>`;
@@ -148,4 +222,4 @@ const htmlContent = `<!DOCTYPE html>
 fs.writeFileSync('research.html', htmlContent);
 fs.writeFileSync('public/research.html', htmlContent);
 fs.writeFileSync('frontend/public/research.html', htmlContent);
-console.log('Successfully created research.html in root, public, and frontend/public');
+console.log('Successfully created updated research.html in root, public, and frontend/public');
