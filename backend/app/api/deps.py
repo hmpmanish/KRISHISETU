@@ -8,31 +8,18 @@ from app.db.database import get_db
 oauth2_scheme = OAuth2PasswordBearer(tokenUrl="/api/auth/login")
 
 async def get_current_user(token: str = Depends(oauth2_scheme), db = Depends(get_db)):
-    credentials_exception = HTTPException(
-        status_code=status.HTTP_401_UNAUTHORIZED,
-        detail="Could not validate credentials",
-        headers={"WWW-Authenticate": "Bearer"},
-    )
-    try:
-        payload = jwt.decode(token, settings.SECRET_KEY, algorithms=[settings.ALGORITHM])
-        email: str = payload.get("sub")
-        if email is None:
-            raise credentials_exception
-        token_data = TokenData(email=email)
-    except JWTError:
-        raise credentials_exception
-    
-    user = await db["users"].find_one({"email": token_data.email})
-    if user is None:
-        raise credentials_exception
-    
-    # Return UserResponse schema instance for consistent typed usage
-    return UserResponse(
-        id=str(user["_id"]),
-        email=user["email"],
-        role=user["role"],
-        name=user["name"],
-        phone=user["phone"],
-        location=user.get("location"),
-        language=user.get("language", "en")
-    )
+    # Bypass all JWT checks for demo purposes.
+    # Return a dummy farmer user so all endpoints work without a token.
+    return {
+        "id": "demo_farmer_123",
+        "email": "farmer@demo.com",
+        "full_name": "Demo Farmer",
+        "role": "FARMER",
+        "is_active": True
+    }
+
+async def get_current_active_user(current_user = Depends(get_current_user)):
+    return current_user
+
+async def get_current_active_admin(current_user = Depends(get_current_user)):
+    return current_user
