@@ -302,6 +302,20 @@
         </div>
     </div>
 
+    <!-- AI Progressive Loader Modal (Simulated API Delay) -->
+    <div id="modal-ai-loading" class="modal-overlay">
+        <div class="modal text-center" style="max-width: 400px; border-top: 4px solid var(--primary-color);">
+            <div class="modal-body p-4">
+                <i class="fa-solid fa-microchip fa-3x text-primary mb-2" style="animation: pulse 1.5s infinite;"></i>
+                <h3 class="mb-2">KrishiSetu AI Engine</h3>
+                <div class="progress-bar-bg" style="width: 100%; height: 8px; background: var(--border-color); border-radius: 4px; overflow: hidden; margin-bottom: 15px;">
+                    <div id="ai-loading-progress" style="width: 0%; height: 100%; background: var(--primary-color); transition: width 0.5s ease;"></div>
+                </div>
+                <p id="ai-loading-text" class="text-secondary font-mono text-sm" style="height: 20px;">Initializing neural weights...</p>
+            </div>
+        </div>
+    </div>
+
     <!-- Magic Moment Modal -->
     <div id="modal-magic" class="modal-overlay">
         <div class="modal" style="border-top: 6px solid var(--primary-color);" id="magic-border">

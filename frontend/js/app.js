@@ -228,11 +228,34 @@ const app = {
         
         app.closeModal('modal-add-batch');
         app.renderFarmerDashboard();
-        app.showNotification(`Batch ${newId} added successfully. AI Engine running...`, "success");
+        
+        // Trigger Simulated AI Loader
+        app.openModal('modal-ai-loading');
+        const progress = document.getElementById('ai-loading-progress');
+        const text = document.getElementById('ai-loading-text');
+        
+        progress.style.width = '10%';
+        text.innerText = 'Analyzing Crop Quality via YOLOv8 model...';
         
         setTimeout(() => {
-            app.showMagicMoment(newId);
-        }, 1500);
+            progress.style.width = '40%';
+            text.innerText = 'Calculating Spoilage Risk based on shelf life...';
+            
+            setTimeout(() => {
+                progress.style.width = '75%';
+                text.innerText = 'Fetching Live Market Demand via API...';
+                
+                setTimeout(() => {
+                    progress.style.width = '100%';
+                    text.innerText = 'Generating optimal routing decision...';
+                    
+                    setTimeout(() => {
+                        app.closeModal('modal-ai-loading');
+                        app.showMagicMoment(newId);
+                    }, 800);
+                }, 1200);
+            }, 1200);
+        }, 1000);
     },
 
     // --- MAGIC MOMENT (AI DECISION) ---
