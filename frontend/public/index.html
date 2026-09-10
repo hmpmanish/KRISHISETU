@@ -209,14 +209,23 @@
         <!-- 3C. VERIFIED DIRECTORY -->
         <section id="view-directory" class="view-section hidden">
             <h2 class="section-title">Verified Entity Directory</h2>
-            <div class="flex justify-between items-center mb-2">
-                <div class="flex gap-1">
+            <div class="flex justify-between items-center mb-2" style="flex-wrap: wrap; gap: 10px;">
+                <div class="flex gap-1" style="flex-wrap: wrap;">
                     <input type="text" id="dir-search" class="form-control" placeholder="Search processors, traders..." style="width: 250px;">
                     <select class="form-control" style="width: 150px;">
                         <option value="">All Types</option>
                         <option value="Processor">Processor</option>
                         <option value="Trader">Trader</option>
                         <option value="Seed Seller">Seed Seller</option>
+                    </select>
+                    <select class="form-control" style="width: 200px;">
+                        <option value="">All Locations</option>
+                        <option value="nearest" style="color: var(--primary-color); font-weight: bold;">📍 Nearest Location (Auto)</option>
+                        <option value="Maharashtra">Maharashtra</option>
+                        <option value="Punjab">Punjab</option>
+                        <option value="Gujarat">Gujarat</option>
+                        <option value="Karnataka">Karnataka</option>
+                        <option value="Uttar Pradesh">Uttar Pradesh</option>
                     </select>
                 </div>
             </div>
@@ -278,6 +287,7 @@
                     <div class="form-group"><label class="form-label">Remaining Shelf Life (Days)</label><input type="number" id="inp-shelflife" class="form-control" required min="1"></div>
                     <div class="form-group"><label class="form-label">Current Market Price</label><select id="inp-market" class="form-control"><option value="Favorable">Favorable</option><option value="Weak">Weak</option></select></div>
                     <div class="form-group"><label class="form-label">Storage Available?</label><select id="inp-storage" class="form-control"><option value="true">Yes</option><option value="false">No</option></select></div>
+                    <div class="form-group"><label class="form-label">Farmer Location</label><select id="inp-location" class="form-control"><option value="nearest" style="font-weight:bold;">📍 Auto-detect Nearest</option><option value="Maharashtra">Maharashtra</option><option value="Punjab">Punjab</option><option value="Karnataka">Karnataka</option></select></div>
                 </form>
             </div>
             <div class="modal-footer">
