@@ -144,11 +144,15 @@
             </div>
 
             <div class="flex justify-between items-center mb-2">
-                <h3 data-i18n="farmer.harvests">My Harvest Batches</h3>
-                <div class="flex gap-1">
-                    <input type="text" id="farmer-search" class="form-control" placeholder="Search crops..." style="width: 200px;">
-                    <button class="btn btn-primary" onclick="app.openModal('modal-add-batch')" data-i18n="farmer.add">+ Add Harvest</button>
+                <h2 data-i18n="farmer.title">My Harvest Batches</h2>
+                <div>
+                    <button class="btn btn-outline mr-1" onclick="app.openModal('modal-complaint')" style="color: var(--danger); border-color: var(--danger);"><i class="fa-solid fa-triangle-exclamation"></i> Raise Complaint</button>
+                    <button class="btn btn-primary" onclick="app.openModal('modal-add-batch')">+ Add Batch</button>
                 </div>
+            </div>
+            <div class="flex gap-1 mb-2">
+                <input type="text" id="farmer-search" class="form-control" placeholder="Search crops..." style="width: 200px;">
+                <button class="btn btn-primary" onclick="app.openModal('modal-add-batch')" data-i18n="farmer.add">+ Add Harvest</button>
             </div>
             
             <div class="table-container">
@@ -295,11 +299,66 @@
                     <div id="chart-crops"></div>
                 </div>
             </div>
+            
+            <div class="card mt-3" style="border-top: 4px solid var(--danger);">
+                <div class="flex justify-between items-center mb-2">
+                    <h3 class="text-danger"><i class="fa-solid fa-headset"></i> Grievance Redressal Desk</h3>
+                </div>
+                <div class="table-container">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Complaint ID</th>
+                                <th>Farmer</th>
+                                <th>Subject</th>
+                                <th>Status</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody id="admin-complaints-table">
+                            <!-- Complaints rendered here -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
         </section>
 
     </main>
 
     <!-- MODALS -->
+
+    <!-- Complaint Modal -->
+    <div id="modal-complaint" class="modal-overlay">
+        <div class="modal">
+            <div class="modal-header"><h3>Raise a Complaint</h3><button class="close-btn" onclick="app.closeModal('modal-complaint')">&times;</button></div>
+            <div class="modal-body">
+                <p class="text-sm text-secondary mb-2">Use this form to report issues with buyers, transport, or platform errors. Complaints are routed to our Admins.</p>
+                <form id="form-complaint" onsubmit="event.preventDefault(); app.submitComplaint();">
+                    <div class="form-group">
+                        <label class="form-label">Subject</label>
+                        <select id="inp-comp-subject" class="form-control" required>
+                            <option value="Payment Delayed">Payment Delayed</option>
+                            <option value="Buyer Rejected Crop">Buyer Rejected Crop</option>
+                            <option value="Transportation Issue">Transportation Issue</option>
+                            <option value="Other">Other</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Related Batch ID (Optional)</label>
+                        <input type="text" id="inp-comp-batch" class="form-control" placeholder="e.g. KS-TOM-2026-001">
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Description</label>
+                        <textarea id="inp-comp-desc" class="form-control" rows="3" required></textarea>
+                    </div>
+                    <div class="modal-footer">
+                        <button class="btn btn-outline" type="button" onclick="app.closeModal('modal-complaint')">Cancel</button>
+                        <button class="btn btn-primary" type="submit" style="background: var(--danger);">Submit Complaint</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
 
     <!-- Add Batch Modal -->
     <div id="modal-add-batch" class="modal-overlay">

@@ -304,6 +304,35 @@ const app = {
         }, 1000);
     },
 
+    submitComplaint: () => {
+        const subject = document.getElementById('inp-comp-subject').value;
+        const batchId = document.getElementById('inp-comp-batch').value || "N/A";
+        const desc = document.getElementById('inp-comp-desc').value;
+        
+        if(!desc) {
+            app.showNotification("Description is required", "warning");
+            return;
+        }
+        
+        const complaints = Storage.get('complaints') || [];
+        const newId = `CMPT-2026-00${complaints.length + 1}`;
+        
+        complaints.push({
+            id: newId,
+            farmer: "Rajesh K.",
+            subject: subject,
+            batchId: batchId,
+            description: desc,
+            status: "Pending Investigation",
+            date: new Date().toLocaleDateString()
+        });
+        
+        Storage.set('complaints', complaints);
+        app.closeModal('modal-complaint');
+        app.showNotification("Your complaint has been successfully registered. Admins have been notified.", "success");
+        document.getElementById('form-complaint').reset();
+    },
+
     // --- MAGIC MOMENT (AI DECISION) ---
 
     showMagicMoment: (batchId) => {
@@ -708,7 +737,10 @@ const app = {
         
         let vol = 0;
         batches.forEach(b => vol += b.quantity);
-        document.getElementById('admin-stat-volume').innerText = vol;
+        const totalVol = vol;
+        document.getElementById('admin-stat-volume').innerText = totalVol.toLocaleString();
+        
+        app.renderAdminComplaints();
 
         const decisionCounts = { SELL: 0, STORE: 0, PROCESS: 0, RESCUE: 0 };
         batches.forEach(b => {
@@ -730,6 +762,38 @@ const app = {
         ]);
     },
     
+    renderAdminComplaints: () => {
+        const tbody = document.getElementById('admin-complaints-table');
+        if(!tbody) return;
+        
+        const complaints = Storage.get('complaints') || [
+            { id: "CMPT-2026-000", farmer: "Suresh P.", subject: "Buyer Rejected Crop", status: "Resolved", date: "9/10/2026" }
+        ];
+        
+        tbody.innerHTML = complaints.map(c => `
+            <tr>
+                <td>${c.id}</td>
+                <td>${c.farmer}</td>
+                <td>${c.subject}</td>
+                <td><span class="badge ${c.status === 'Resolved' ? 'badge-process' : 'badge-rescue'}">${c.status}</span></td>
+                <td>
+                    ${c.status !== 'Resolved' ? `<button class="btn btn-sm btn-outline text-success" style="border-color: var(--success);" onclick="app.resolveComplaint('${c.id}')"><i class="fa-solid fa-check"></i> Resolve</button>` : `<i class="fa-solid fa-check text-success"></i>`}
+                </td>
+            </tr>
+        `).join('');
+    },
+
+    resolveComplaint: (id) => {
+        let complaints = Storage.get('complaints') || [];
+        let idx = complaints.findIndex(c => c.id === id);
+        if(idx !== -1) {
+            complaints[idx].status = "Resolved";
+            Storage.set('complaints', complaints);
+            app.renderAdminComplaints();
+            app.showNotification(`Complaint ${id} marked as resolved.`, "success");
+        }
+    },
+
     // --- MASTER DEMO SCENARIO ---
     startJudgeDemo: () => {
         app.resetDemo();
