@@ -75,3 +75,8 @@ This application was strictly built as a **Frontend-Only** application using HTM
 3. Click **"Start Judge Demo"** in the top navigation to experience the core narrative flow.
 
 *KrishiSetu does not just tell a farmer what to do after harvest. It explains why, shows supporting evidence, helps verify the next participant, creates traceability, and keeps the final decision with the farmer.*
+
+---
+
+## 📚 Project Documentation & Research
+- [Read the Full Research & Problem Validation](RESEARCH_VALIDATION.md) - Detailed breakdown of the existing ecosystem, our identified gap, and Judge FAQs.
