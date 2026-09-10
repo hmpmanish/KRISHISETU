@@ -20,8 +20,8 @@
             <i class="fa-solid fa-leaf text-primary"></i> <span data-i18n="nav.brand">KrishiSetu</span>
         </div>
         <div class="nav-links">
-            <a href="#" onclick="app.showView('view-directory')" id="nav-dir" class="hidden">Directory</a>
-            <a href="#" onclick="app.showView('view-verify')" id="nav-verify" class="hidden">Trust & Verify</a>
+            <a href="#" onclick="app.showView('view-directory')" id="nav-dir" class="hidden"><i class="fa-solid fa-book"></i> Directory</a>
+            <a href="#" onclick="app.showView('view-verify')" id="nav-verify" class="hidden"><i class="fa-solid fa-shield-halved"></i> Trust & Verify</a>
             <a href="dealers.html" class="nav-link"><i class="fa-solid fa-list-check"></i> Verified Dealers</a>
             <a href="research.html" class="nav-link"><i class="fa-solid fa-flask"></i> Research</a>
             <a href="technical-approach.html" class="nav-link"><i class="fa-solid fa-microchip"></i> Architecture</a>
@@ -414,6 +414,20 @@
             </div>
         </div>
     </div>
+
+    <!-- Footer -->
+    <footer class="mt-4" style="background: var(--surface-glass); border-top: 1px solid var(--border-color); padding: 40px 20px; text-align: center; backdrop-filter: blur(10px);">
+        <div style="max-width: 800px; margin: 0 auto;">
+            <h3 class="text-primary mb-1"><i class="fa-solid fa-leaf"></i> KrishiSetu</h3>
+            <p class="text-secondary text-sm mb-2">Empowering farmers with AI-driven post-harvest routing, connecting them directly to verified processors and cold storage networks across India.</p>
+            <div class="flex justify-center gap-2 mb-2" style="font-size: 1.5rem; color: var(--text-muted);">
+                <i class="fa-brands fa-github" style="cursor:pointer; transition: color 0.3s;" onmouseover="this.style.color='var(--primary-color)'" onmouseout="this.style.color='var(--text-muted)'"></i>
+                <i class="fa-solid fa-envelope" style="cursor:pointer; transition: color 0.3s;" onmouseover="this.style.color='var(--primary-color)'" onmouseout="this.style.color='var(--text-muted)'"></i>
+                <i class="fa-brands fa-twitter" style="cursor:pointer; transition: color 0.3s;" onmouseover="this.style.color='var(--primary-color)'" onmouseout="this.style.color='var(--text-muted)'"></i>
+            </div>
+            <p class="text-sm text-muted">© 2026 KrishiSetu | Built for Smart India Hackathon Prototype Demo</p>
+        </div>
+    </footer>
 
     <!-- Scripts -->
     <script src="js/storage.js"></script>
