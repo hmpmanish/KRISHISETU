@@ -18,17 +18,8 @@ const app = {
         const newLang = currentLang === 'en' ? 'hi' : 'en';
         document.documentElement.lang = newLang;
         
-        if (typeof Translations !== 'undefined') {
-            document.querySelectorAll('[data-i18n]').forEach(el => {
-                const key = el.getAttribute('data-i18n');
-                if (Translations[newLang] && Translations[newLang][key]) {
-                    if (el.tagName === 'INPUT' || el.tagName === 'TEXTAREA') {
-                        el.placeholder = Translations[newLang][key];
-                    } else {
-                        el.innerText = Translations[newLang][key];
-                    }
-                }
-            });
+        if (typeof setLanguage === 'function') {
+            setLanguage(newLang);
         }
         app.showNotification(newLang === 'en' ? 'Language switched to English' : 'भाषा हिंदी में बदल गई', 'success');
     },
