@@ -423,6 +423,54 @@ const app = {
 
     showQR: () => {
         app.openModal('modal-qr');
+        const batchId = document.getElementById('batch-view-id').innerText || "KS-DEMO-2026";
+        const qrContainer = document.getElementById('real-qr-code');
+        qrContainer.innerHTML = ''; // Clear previous
+        new QRCode(qrContainer, {
+            text: `https://krishisetu.gov.in/verify?id=${batchId}`,
+            width: 150,
+            height: 150,
+            colorDark : "#059669",
+            colorLight : "#ffffff",
+            correctLevel : QRCode.CorrectLevel.H
+        });
+    },
+
+    downloadPDF: () => {
+        const element = document.getElementById('pdf-content-area');
+        const opt = {
+            margin:       0.5,
+            filename:     `KrishiSetu-Contract-${document.getElementById('batch-view-id').innerText}.pdf`,
+            image:        { type: 'jpeg', quality: 0.98 },
+            html2canvas:  { scale: 2 },
+            jsPDF:        { unit: 'in', format: 'letter', orientation: 'portrait' }
+        };
+        html2pdf().set(opt).from(element).save();
+    },
+
+    startCamera: async () => {
+        const container = document.getElementById('camera-container');
+        const video = document.getElementById('live-video');
+        const box = document.getElementById('yolo-box');
+        const btn = document.getElementById('btn-start-camera');
+        
+        container.classList.remove('hidden');
+        btn.classList.add('hidden');
+        
+        try {
+            const stream = await navigator.mediaDevices.getUserMedia({ video: { facingMode: 'environment' } });
+            video.srcObject = stream;
+            
+            // Simulate YOLOv8 AI analyzing
+            setTimeout(() => {
+                box.classList.remove('hidden');
+                document.getElementById('inp-quality').value = "Good";
+                app.showNotification("YOLOv8 Analysis Complete: Quality detected as Good (98% confidence)", "success");
+            }, 2500);
+            
+        } catch (err) {
+            app.showNotification("Camera access denied or unavailable. Please manually select quality.", "warning");
+        }
     },
 
     // --- TRUST & VERIFY HUB ---

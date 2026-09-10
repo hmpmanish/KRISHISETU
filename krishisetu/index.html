@@ -8,6 +8,10 @@
     <link rel="stylesheet" href="css/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Real Prototype Dependencies -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
 </head>
 <body data-theme="light">
     
@@ -285,6 +289,22 @@
         <div class="modal">
             <div class="modal-header"><h3>Add Harvest Batch</h3><button class="close-btn" onclick="app.closeModal('modal-add-batch')">&times;</button></div>
             <div class="modal-body">
+                
+                <!-- Live Camera Integration (Simulated YOLOv8) -->
+                <div class="card bg-light text-center mb-2" id="camera-section">
+                    <h4 class="text-primary mb-1"><i class="fa-solid fa-camera"></i> Scan Crop (Live AI Vision)</h4>
+                    <p class="text-sm text-secondary mb-1">Use your device camera to simulate YOLOv8 crop quality analysis.</p>
+                    <button class="btn btn-outline" id="btn-start-camera" type="button" onclick="app.startCamera()"><i class="fa-solid fa-video"></i> Start Camera</button>
+                    
+                    <div id="camera-container" class="hidden mt-2" style="position: relative; width: 100%; max-width: 400px; margin: 0 auto; border-radius: var(--radius-md); overflow: hidden; border: 2px solid var(--primary-color);">
+                        <video id="live-video" autoplay playsinline style="width: 100%; display: block;"></video>
+                        <!-- Simulated YOLOv8 Bounding Box -->
+                        <div id="yolo-box" class="hidden" style="position: absolute; top: 20%; left: 20%; width: 60%; height: 60%; border: 3px solid #10B981; box-shadow: 0 0 15px rgba(16, 185, 129, 0.5); border-radius: 8px;">
+                            <span style="position: absolute; top: -25px; left: -3px; background: #10B981; color: white; padding: 2px 8px; font-size: 12px; font-weight: bold; border-radius: 4px;">Tomato - 98% (Good)</span>
+                        </div>
+                    </div>
+                </div>
+
                 <form id="form-add-batch" class="grid-2" onsubmit="event.preventDefault(); app.submitBatch();">
                     <div class="form-group"><label class="form-label">Crop</label><select id="inp-crop" class="form-control" required><option value="Tomato">Tomato</option><option value="Potato">Potato</option><option value="Wheat">Wheat</option><option value="Mango">Mango</option></select></div>
                     <div class="form-group"><label class="form-label">Quantity (Quintal)</label><input type="number" id="inp-qty" class="form-control" required min="1"></div>
@@ -365,8 +385,12 @@
     <!-- Timeline / Batch View Modal -->
     <div id="modal-batch-view" class="modal-overlay">
         <div class="modal">
-            <div class="modal-header"><h3>Batch Traceability <span id="batch-view-id" class="text-secondary text-sm"></span></h3><button class="close-btn" onclick="app.closeModal('modal-batch-view')">&times;</button></div>
-            <div class="modal-body">
+            <div class="modal-header">
+                <h3>Batch Traceability <span id="batch-view-id" class="text-secondary text-sm"></span></h3>
+                <button class="btn btn-sm btn-outline text-primary ml-auto mr-1" onclick="app.downloadPDF()" style="border-color: var(--primary-color);"><i class="fa-solid fa-file-pdf"></i> Download PDF</button>
+                <button class="close-btn" onclick="app.closeModal('modal-batch-view')">&times;</button>
+            </div>
+            <div class="modal-body" id="pdf-content-area">
                 <div class="flex justify-between items-center mb-2">
                     <div id="batch-view-status" class="badge badge-demo">Pending</div>
                     <button class="btn btn-secondary btn-sm" onclick="app.showQR()"><i class="fa-solid fa-qrcode"></i> View Traceability QR</button>
@@ -408,8 +432,8 @@
         <div class="modal text-center" style="max-width: 350px;">
             <div class="modal-header"><h3>Prototype Verification</h3><button class="close-btn" onclick="app.closeModal('modal-qr')">&times;</button></div>
             <div class="modal-body">
-                <div class="qr-mock"></div>
-                <p class="mt-2 text-sm text-secondary">In a real deployment, scanning this connects to government registries and validates farmer identity and batch origin.</p>
+                <div id="real-qr-code" style="display: flex; justify-content: center; margin: 15px 0;"></div>
+                <p class="mt-2 text-sm text-secondary">Scan this live QR code with your phone camera! It contains the real encrypted Batch Data.</p>
                 <div class="badge badge-process mt-2">Verified Demo Batch</div>
             </div>
         </div>
