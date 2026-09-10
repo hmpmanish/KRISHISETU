@@ -5,6 +5,52 @@ const app = {
     currentRole: null,
     currentBatchContext: null,
 
+    toggleTheme: () => {
+        const body = document.body;
+        const currentTheme = body.getAttribute('data-theme');
+        const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+        body.setAttribute('data-theme', newTheme);
+        Storage.set('theme', newTheme);
+    },
+
+    toggleLanguage: () => {
+        const currentLang = document.documentElement.lang || 'en';
+        const newLang = currentLang === 'en' ? 'hi' : 'en';
+        document.documentElement.lang = newLang;
+        
+        if (typeof Translations !== 'undefined') {
+            document.querySelectorAll('[data-i18n]').forEach(el => {
+                const key = el.getAttribute('data-i18n');
+                if (Translations[newLang] && Translations[newLang][key]) {
+                    if (el.tagName === 'INPUT' || el.tagName === 'TEXTAREA') {
+                        el.placeholder = Translations[newLang][key];
+                    } else {
+                        el.innerText = Translations[newLang][key];
+                    }
+                }
+            });
+        }
+        app.showNotification(newLang === 'en' ? 'Language switched to English' : 'भाषा हिंदी में बदल गई', 'success');
+    },
+
+    exportCSV: () => {
+        const batches = Storage.get('batches') || [];
+        if(batches.length === 0) {
+            app.showNotification("No data to export", "warning");
+            return;
+        }
+        const headers = ["ID", "Crop", "Quantity", "Quality", "ShelfLife", "Risk", "Status"];
+        const rows = batches.map(b => [b.id, b.crop, b.quantity, b.quality, b.shelfLife, b.spoilageRisk, b.status].join(","));
+        const csvContent = "data:text/csv;charset=utf-8," + [headers.join(","), ...rows].join("\n");
+        const encodedUri = encodeURI(csvContent);
+        const link = document.createElement("a");
+        link.setAttribute("href", encodedUri);
+        link.setAttribute("download", "krishisetu_admin_export.csv");
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+    },
+
     init: () => {
         initDemoData();
         app.bindEvents();
